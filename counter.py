@@ -4,7 +4,11 @@ import argparse
 import time
 
 def read_list(filename):
-    f = open(filename, "r")
+    try:
+        f = open(filename, "r")
+    except IOError:
+        print "Could not load file: {}".format(filename)
+        return list()
 
     # skip the header
     f.next()
