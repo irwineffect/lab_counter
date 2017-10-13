@@ -47,8 +47,8 @@ if __name__ == "__main__":
             current_time = time.time()
             student_list.append((student_id, current_time))
     except KeyboardInterrupt:
-        print "interrupt!"
+        print "exiting, writing out list..."
 
-    print student_list
     write_list(student_list, args.filename)
+    print "goodbye!"
 
